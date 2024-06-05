@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cucu奶茶-点单</title>
+    <link rel="stylesheet" href="cus.css">
+    <script src="cus.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"></div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#page1" class="nav-link">点单</a></li>
+                <li><a href="#page2" class="nav-link">地址管理</a></li>
+                <li><a href="#page3" class="nav-link">历史订单</a></li>
+                <li><a href="#page4" class="nav-link">个人信息</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="page1" class="page">
+                <h2>欢迎来到页面1</h2>
+                <p>这是页面1的内容。</p>
+                <div class="wrapped">
+                    <div class="good">
+                        <img src="./img/mt1.jpg" alt="">
+                        <h4>百香果双响炮</h4>
+                        <p>宇宙无敌霹雳爆炸好喝</p>
+                        <h5>￥15</h5>
+                        <button class="circle-button">&#43;</button>
+                    </div>
+                    <div class="good">
+                        <img src="./img/mt1.jpg" alt="">
+                        <h4>百香果双响炮</h6>
+                            <p>宇宙无敌霹雳爆炸好喝</p>
+                            <h5>￥15</h5>
+                            <button class="circle-button">&#43;</button>
+                    </div>
+                    <div class="good">
+                        <img src="./img/mt1.jpg" alt="">
+                        <h4>百香果双响炮</h4>
+                        <p>宇宙无敌霹雳爆炸好喝</p>
+                        <h5>￥15</h5>
+                        <button class="circle-button">&#43;</button>
+                    </div>
+                    <div class="good">
+                        <img src="./img/mt1.jpg" alt="">
+                        <h4>百香果双响炮</h4>
+                        <p>宇宙无敌霹雳爆炸好喝</p>
+                        <h5>￥15</h5>
+                        <button class="circle-button">&#43;</button>
+                    </div>
+                </div>
+            </div>
+            <div id="page2" class="page" style="display: none;">
+                <h2>欢迎来到页面2</h2>
+                <p>这是页面2的内容。</p>
+            </div>
+            <div id="page3" class="page" style="display: none;">
+                <h2>历史订单</h2>
+                <p>这是页面3的内容。</p>
+                <table cellspacing="0" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th>订单编号</th>
+                            <th>商品名称</th>
+                            <th>金额</th>
+                            <th>送货地址</th>
+                            <th>电话</th>
+                            <th>备注</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1000100000001</td>
+                            <td>百香果双响炮</td>
+                            <td>15</td>
+                            <td>南开大学津南校区</td>
+                            <td>13000000001</td>
+                            <td></td>
+                            <td>已完成</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>商品B</td>
+                            <td>200元</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>商品C</td>
+                            <td>150元</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page4" class="page" style="display: none;">
+                <table cellspacing="0" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <th>昵称</th>
+                            <td>百香果双响炮</td>
+                        </tr>
+                        <tr>
+                            <th>手机号码</th>
+                            <td>商品B</td>
+                        </tr>
+                        <tr>
+                            <th>积分</th>
+                            <td>商品C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!--  模态对话框背景 -->
+    <div id="myModal" class="modal">
+        <!-- 模态内容 -->
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- 关闭按钮 -->
+            <h3 id="modal-product-name">商品名称</h3>
+            <h3 id="modal-product-price">商品金额</h3>
+            <p>请填写收货信息:</p>
+            <form id="orderForm">
+                <label for="address">地址:</label><br>
+                <input type="text" id="address" name="address"><br>
+                <label for="phone">电话号码:</label><br>
+                <input type="tel" id="phone" name="phone"><br>
+                <!-- 确认支付按钮 -->
+                <button type="submit" class="pay-button">确认下单</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

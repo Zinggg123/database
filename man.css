@@ -1,0 +1,315 @@
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #FDFCEA;
+}
+
+.header {
+    display: flex;
+}
+
+.header .logo{
+    height: 150px;
+    width: 150px;
+    margin: 20px 60px 20px 160px;
+
+    background-image: url(./img/logo.jpg);
+    background-size: contain;
+}
+
+.header .lname{
+    margin-top: 40px;
+    line-height: 150px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #535353;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #ecebe1;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar a {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #535353;
+}
+
+.nav-link {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.nav-link:hover {
+    background-color: #ddd;
+}
+
+/* 右边栏 */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+
+    border-top: 5px solid #ecebe1;
+}
+
+.page {
+    transition: opacity 0.5s;
+    margin: 30px;
+}
+
+.page h2{
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 40px;
+    color: #535353;
+}
+
+.page h3{
+    display: inline-block;
+    margin-left: 50px;
+    color: #535353;
+}
+
+/* ctop */
+.ctop{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px 20px;
+}
+
+.add{
+    height: 40px;
+    font-size: 80px;
+}
+
+/* 搜索框 */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 200px;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #7b7b7b;
+  }
+  
+  .content button {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-left: none;
+    background-color: #7b7b7b;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .content button:hover {
+    opacity: 0.8;
+  }
+  
+  .content button:active {
+    background-color: #5f5f5f;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+/* 表格 */
+.content table {
+    width: 100%;
+    text-align: center;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.content th, td {
+    padding-left: 20px;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    color: #535353;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.content th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.content tbody tr:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+.content td:last-child, th:last-child {
+    text-align: center; /* 如果"操作"列需要居中显示的话 */
+}
+
+.content table button{
+    background-color: #7b7b7b; 
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.content table button:hover {
+    opacity: 0.8;
+}
+
+/* 商品 */
+.wrapped {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.good {
+    width: 300px;
+    height: 500px;
+    background-color: #72797b;
+}
+
+.good img {
+    width: 100%;
+
+}
+
+.good h4 {
+    margin-left: 40px;
+}
+
+.good p {
+    margin-left: 40px;
+}
+
+.circle-button {
+    margin-left: 135px;
+    display: inline-block;
+    width: 30px;
+    /* 设置宽度和高度相同以形成圆形 */
+    height: 30px;
+    line-height: 30px;
+    /* 文字垂直居中 */
+    text-align: center;
+    /* 文字水平居中 */
+    border-radius: 50%;
+    /* 制作圆形 */
+    background-color: #4c91af;
+    /* 按钮背景色 */
+    color: white;
+    /* 文字颜色 */
+    font-size: 24px;
+    /* 文字大小 */
+    cursor: pointer;
+    /* 鼠标悬停时的指针形状 */
+    border: none;
+    /* 移除边框 */
+}
+
+
+
+/* 确认下单 */
+/* 模态对话框背景 */
+.modal {
+    display: none;
+    /* 默认隐藏 */
+    position: fixed;
+    /* 固定位置 */
+    z-index: 1;
+    /* 确保在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* 允许滚动 */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 半透明黑色背景 */
+}
+
+/* 模态内容 */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 位置居中 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* 可调整宽度 */
+}
+
+/* 关闭按钮 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pay-button {
+    background-color: #4CAF50;
+    /* 绿色背景 */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
