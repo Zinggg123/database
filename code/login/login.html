@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cucu奶茶-登录</title>
+    <meta name="description" content="Cucu奶茶官网，提供最好喝的奶茶！">
+    <meta name="keywords" content="Cucu奶茶">
+    <link rel="stylesheet" href="./login.css">
+    <script src="../JS/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="b">
+        <div class="logo"></div>
+        <h4>Login</h4>
+        <form action="login.php" method="post" id="loginForm"> 
+            <input type="hidden" id="userType" name="userType">
+            <input class="one" type="text" name="ctel" placeholder="手机号码" required> <!-- 添加了name属性 -->
+            <br>
+            <input class="one" type="password" name="cpw" placeholder="密码" required> <!-- 更改为type="password"并添加了name属性 -->
+            <br>
+            <div class="btns">
+                <button type="button" class="but" id="cusbut">顾客登录</button>
+                <button type="button" class="but" id="worbut">员工登录</button>
+            </div>
+            <button type="button" class="but" id="signbut">Sign Up</button>
+        </form>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#cusbut").click(function(){
+                $("#userType").val("customer");
+                $("#loginForm").submit();
+            });
+
+            $("#worbut").click(function(){
+                $("#userType").val("worker");
+                $("#loginForm").submit();
+            });
+
+            $("#signbut").click(function(){
+                window.location.href = "../sign/sign.html";
+            });
+
+        });
+    </script>
+</body>
+
+</html>

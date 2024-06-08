@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    /* 移除默认外边距 */
+    display: flex;
+    /* 使用Flex布局 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    height: 100vh;
+    /* 让页面高度占满视口 */
+    color: #535353;
+    background-color: #FDFCEA;
+}
+
+.b {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 60px 30px 20px;
+    background-color: #ecebe1;
+}
+
+.logo {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/logo.jpg);
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+h4 {
+    margin: 35px auto 40px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.one {
+    margin: 15px;
+    height: 50px;
+    width: 90%;
+    padding-left: 10px;
+    border: 0px grey solid;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: grey;
+}
+
+.btns {
+    display: flex;
+}
+
+.but {
+    margin: 15px auto 5px;
+    height: 50px;
+    width: 40%;
+    border: 0px;
+    padding: 0px;
+    background-color: #818181;
+    color: #fff;
+    font-size: 12px;
+    /* box-sizing: border-box; */
+}
+
+#signbut{
+    width:90%;
+    margin-bottom: 35px;
+}

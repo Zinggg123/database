@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cucu奶茶-注册</title>
+    <meta name="description" content="Cucu奶茶官网，提供最好喝的奶茶！">
+    <meta name="keywords" content="Cucu奶茶">
+    <link rel="stylesheet" href="../login/login.css">
+    <script src="../JS/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="b">
+        <div class="logo"></div>
+        <h4>Sign Up</h4>
+        <form id="signForm" action="sign.php" method="post">
+            <input type="hidden" id="userType" name="userType">
+            <!-- <h5>手机号码</h5> -->
+            <input class="one" type="text" name="ctel" placeholder="手机号码" required> <!-- 添加了name属性 -->
+            <br>
+            <!-- <h5>昵称</h5> -->
+            <input class="one" type="text" name="cname" placeholder="昵称" required> <!-- 添加了name属性 -->
+            <br>
+            <!-- <h5>密码</h5> -->
+            <input class="one" type="password" name="cpw" placeholder="密码" required> <!-- 更改为type="password"并添加了name属性 -->
+            <!-- <button type="submit" class="but">完成注册</button> -->
+            <div class="btns">
+                <button type="button" class="but" id="cusbut">顾客注册</button>
+                <button type="button" class="but" id="worbut">员工注册</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#cusbut").click(function(){
+                $("#userType").val("customer");
+                $("#signForm").submit();
+            });
+
+            $("#worbut").click(function(){
+                $("#userType").val("worker");
+                $("#signForm").submit();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
